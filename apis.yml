@@ -1,17 +1,35 @@
 aid: acerasurgical
-name: Acerasurgical
-description: 'Acerasurgical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Acera Surgical
+description: >-
+  Acera Surgical Inc. is a St. Louis, Missouri bioscience company founded in 2013 that develops and
+  commercializes fully engineered, 100% synthetic materials for regenerative wound care and soft
+  tissue repair, built on a proprietary electrospun nanofiber technology platform. Its Restrata
+  product family — Restrata Sheet, Restrata Meshed and Restrata MiniMatrix — is a fully resorbable
+  synthetic matrix used to treat hard-to-heal and complex wounds in acute care settings, and its
+  Cerafix implant addresses dural repair and cerebrospinal fluid leakage. Acera was acquired by
+  Solventum Corporation on December 23, 2025 for $725 million in cash plus up to $125 million in
+  milestone payments, and now sits inside Solventum's Medical segment MedSurg portfolio. Acera is a
+  medical device manufacturer, not a software company: it publishes no API, developer portal, SDK,
+  or machine-readable interface of any kind.
 url: https://raw.githubusercontent.com/api-evangelist/acerasurgical/refs/heads/main/apis.yml
+image: https://acera-surgical.com/site/user/images/acera_asc_pos_rgb_2000px.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
+x-tier: profiled
 x-tier-reason: harvest
 specificationVersion: '0.20'
+position: Consuming
 created: '2026-09-06'
 modified: '2026-09-06'
 tags:
 - Company
+- Medical Devices
+- Regenerative Medicine
+- Wound Care
+- Biotechnology
+- Surgical
+- Life Sciences
+- Healthcare
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,36 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/acerasurgical
+  url: https://acera-surgical.com/
+- type: PrivacyPolicy
+  url: https://acera-surgical.com/privacy-policy/
+- type: Support
+  url: https://acera-surgical.com/contact-us/
+- type: DomainSecurity
+  url: security/acerasurgical-domain-security.yml
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Acera Surgical manufactures physical implantable regenerative wound-care devices (Restrata
+    electrospun nanofiber matrices, Cerafix dural repair); its entire public site is a five-page
+    ASP.NET marketing brochure with no developer, integration, or documentation section, and the
+    host answers every unknown path — including every /.well-known/ document — with a soft-200
+    copy of the homepage.
+  evidence:
+  - url: https://acera-surgical.com/
+    status: 200
+  - url: https://acera-surgical.com/.well-known/security.txt
+    status: 200
+  - url: https://acera-surgical.com/openapi.json
+    status: 200
+  - url: https://acera-surgical.com/llms.txt
+    status: 200
+  - url: https://acera-surgical.com/zzz-this-path-does-not-exist-9f3a
+    status: 200
+  checked: '2026-09-06'
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
