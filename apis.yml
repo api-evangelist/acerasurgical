@@ -20,7 +20,7 @@ x-tier-reason: harvest
 specificationVersion: '0.20'
 position: Consuming
 created: '2026-09-06'
-modified: '2026-09-06'
+modified: '2026-10-06'
 tags:
 - Company
 - Medical Devices
@@ -37,6 +37,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://acera-surgical.com/blog
+  type: Blog
 - type: Website
   url: https://acera-surgical.com/
 - type: PrivacyPolicy
